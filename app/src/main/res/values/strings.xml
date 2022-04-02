@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">NotatnikDemo</string>
+    <string name="topic">Tytuł notatki</string>
+    <string name="text">Treść notatki</string>
+    <string name="add">Dodaj</string>
+    <string name="edit">Zobacz</string>
+    <string name="apply">Zatwierdź</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
