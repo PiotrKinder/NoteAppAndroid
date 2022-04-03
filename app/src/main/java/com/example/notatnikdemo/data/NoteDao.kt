@@ -12,6 +12,6 @@ interface NoteDao {
     @Insert(onConflict = OnConflictStrategy.IGNORE)
     suspend fun addNote(noteModel: Note)
 
-    @Query("SELECT * FROM notes_table ORDER BY id ASC")
+    @Query("SELECT * FROM note_table ORDER BY id ASC")
     fun readAllData(): LiveData<List<Note>>
 }
