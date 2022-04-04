@@ -1,6 +1,5 @@
 package com.example.notatnikdemo.data
 
-import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 
@@ -8,4 +7,5 @@ import androidx.room.PrimaryKey
 data class Note (
     @PrimaryKey (autoGenerate = true) val id: Int,
     val topic: String,
-    val text: String)
+    val text: String,
+    val date: String)

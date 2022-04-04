@@ -7,7 +7,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.EditText
-import android.widget.TextView
 import android.widget.Toast
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
@@ -15,6 +14,7 @@ import com.example.notatnikdemo.R
 import com.example.notatnikdemo.data.Note
 import com.example.notatnikdemo.data.NoteViewModel
 import com.google.android.material.floatingactionbutton.FloatingActionButton
+import java.util.*
 
 
 class AddFragment : Fragment() {
@@ -43,9 +43,10 @@ class AddFragment : Fragment() {
         val contentNote: EditText = view.findViewById(R.id.contentText)
         val topic= topicNote.text.toString()
         val content = contentNote.text.toString()
+        val date = Calendar.getInstance().time.toString()
 
         if(inputCheck(topic,content)){
-            val note = Note(0,topic, content)
+            val note = Note(0,topic, date , content)
             mNoteViewModel.addNote(note)
             Toast.makeText(requireContext(),"Pomyślnie dodano!",Toast.LENGTH_LONG).show()
             findNavController().navigate(R.id.action_addFragment_to_listFragment)

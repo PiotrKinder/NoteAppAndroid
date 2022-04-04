@@ -4,9 +4,6 @@ import android.app.Application
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.viewModelScope
-import com.example.notatnikdemo.data.Note
-import com.example.notatnikdemo.data.NoteDatabase
-import com.example.notatnikdemo.data.NoteRepository
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
