@@ -11,8 +11,8 @@ import android.widget.Toast
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import com.example.notatnikdemo.R
-import com.example.notatnikdemo.data.Note
-import com.example.notatnikdemo.data.NoteViewModel
+import com.example.notatnikdemo.model.Note
+import com.example.notatnikdemo.viewmodel.NoteViewModel
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import java.util.*
 
@@ -46,7 +46,7 @@ class AddFragment : Fragment() {
         val date = Calendar.getInstance().time.toString()
 
         if(inputCheck(topic,content)){
-            val note = Note(0,topic, date , content)
+            val note = Note(0,topic, content, date)
             mNoteViewModel.addNote(note)
             Toast.makeText(requireContext(),"Pomyślnie dodano!",Toast.LENGTH_LONG).show()
             findNavController().navigate(R.id.action_addFragment_to_listFragment)

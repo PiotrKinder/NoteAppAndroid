@@ -11,7 +11,7 @@ import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.notatnikdemo.R
-import com.example.notatnikdemo.data.NoteViewModel
+import com.example.notatnikdemo.viewmodel.NoteViewModel
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 
